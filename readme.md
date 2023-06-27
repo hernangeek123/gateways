@@ -4,7 +4,7 @@ This is a REST service for managing gateways and their associated devices. The s
 
 ## Installation
 
-1. Extract the contents of the ZIP file to a directory on your local machine.
+1. Clone the repository.
 2. Install the required dependencies by running npm install in the project directory.
 3. Make sure that MongoDB is running on your machine.
 4. Start the server by running `npm start`.
