@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Gateway</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validator.js"></script>
+  </head>
+  <body>
+    <h1>Add Gateway</h1>
+    <form id="gatewayForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="serialNumber">Serial Number:</label>
+        <input type="text" id="serialNumber" name="serialNumber" required>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="ipAddress">IP Address:</label>
+        <input type="text" id="ipAddress" name="ipAddress" required>
+        <span class="error"></span>
+      </div>
+
+      <!-- Peripherals -->
+      <fieldset id="peripherals">
+        <legend>Peripherals:</legend>
+
+        <!-- Peripheral template -->
+        <template id="peripheralTemplate">
+          <fieldset class="peripheral">
+            <legend>Peripheral</legend>
+
+            <!-- UID -->
+            <div>
+              <label>UID:</label>
+              <input type="number" name="uid" required />
+              <span class="error"></span>
+            </div>
+
+            <!-- Vendor -->
+            <div>
+              <label>Vendor:</label>
+              <input type="text" name="vendor" required />
+              <span class="error"></span>
+            </div>
+
+            <!-- Status -->
+            <div>
+              <label>Status:</label>
+              <select name="status" required >
+                <option value="">--Select--</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+              <span class="error"></span>
+            </div>
+
+            <!-- Remove button -->
+            <button type="button" class="removePeripheral">Remove</button>
+
+          </fieldset> 
+        </template>
+
+        <!-- Add button -->
+        <button type="button" id="addPeripheral">Add Peripheral</button>
+
+        <!-- Error message -->
+        <p id="peripheralsError"></p>
+
+      </fieldset>
+
+      <!-- Submit button -->
+      <div><button type="submit">Add Gateway</button></div>
+
+    </form>
+
+    <!-- Result message -->
+    <p id="result"></p>
+
+    <!-- Script -->
+    <script src="./ui.js"></script>
+
+  </body>
+</html>
